@@ -1,0 +1,22 @@
+/* styles/globals.css */
+:root {
+  --primary-color: #ffd93d;
+  --secondary-color: #ff6347;
+  --dark-bg: #0a0a0a;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --text-light: #ffffff;
+  --text-dark: #1a1a1a;
+  --gradient-primary: linear-gradient(45deg, #ffd93d, #ff6347);
+  --gradient-dark: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  --shadow-normal: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-strong: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
+}

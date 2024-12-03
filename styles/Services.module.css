@@ -1,0 +1,476 @@
+/* styles/Services.module.css */
+
+.servicesWrapper {
+  min-height: 100vh;
+  width: 100%;
+  background: #0a0a0a;
+}
+
+/* Hero Section */
+.heroSection {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.heroContent {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 8vw, 5rem);
+  margin-bottom: 1.5rem;
+}
+
+.titleMain {
+  display: block;
+  color: #ffffff;
+}
+
+.titleHighlight {
+  display: block;
+  background: linear-gradient(45deg, #ffd93d, #ff6347);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 8s linear infinite;
+  background-size: 200% auto;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: #e0e0e0;
+  margin-bottom: 4rem;
+}
+
+.heroCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+.heroCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.heroCard:hover {
+  transform: translateY(-10px);
+}
+
+.cardNumber {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 4rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.heroCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.heroCard p {
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.heroCta {
+  margin-top: 3rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn {
+  background: #ffd93d;
+  color: #1a1a1a;
+  border: none;
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+/* Main Services Section */
+.mainSection {
+  background: #ffffff;
+  padding: 6rem 2rem;
+}
+
+.tabContainer {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f0f0f0;
+}
+
+.activeTab {
+  background: #ffd93d;
+  color: #1a1a1a;
+  transform: scale(1.05);
+}
+
+.contentArea {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contentWrapper {
+  padding: 2rem;
+}
+
+.contentTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #1a1a1a;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.featureCard {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.featureItem {
+  padding: 0.8rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.checkmark {
+  color: #ff6347;
+  font-weight: bold;
+}
+
+/* Process Section */
+.processSection {
+  background: #f8f9fa;
+  padding: 6rem 2rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: #1a1a1a;
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.processCardWrapper {
+  perspective: 1000px;
+  height: 280px;
+}
+
+.processCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.processCardWrapper:hover .processCard {
+  transform: rotateY(180deg);
+}
+
+.processCardFront,
+.processCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ffd93d;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.processCardFront {
+  color: #1a1a1a;
+}
+
+.processCardBack {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, #ffd93d 0%, #ff6347 100%);
+  color: #1a1a1a;
+}
+
+.processCardBack p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.processNumber {
+  width: 50px;
+  height: 50px;
+  background: #ffd93d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.processCardFront h3 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* Update the media query for process section */
+@media screen and (max-width: 768px) {
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .processCardWrapper {
+    height: 250px;
+  }
+}
+/* Technologies Section */
+.techSection {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  padding: 6rem 2rem;
+  color: #ffffff;
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.techCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.techCard:hover {
+  transform: translateY(-10px);
+}
+
+/* Pricing Section */
+.pricingSection {
+  background: #ffffff;
+  padding: 6rem 2rem;
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.priceCard {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.featured {
+  border: 2px solid #ffd93d;
+  transform: scale(1.05);
+}
+
+.price {
+  font-size: 3rem;
+  color: #1a1a1a;
+  margin: 1rem 0;
+}
+
+.priceFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.priceFeatures li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.priceButton {
+  padding: 1rem 2.5rem;
+  background: #ffd93d;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.priceButton:hover {
+  transform: translateY(-3px);
+}
+
+/* CTA Section */
+.ctaSection {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  padding: 8rem 2rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaButton {
+  padding: 1.2rem 3rem;
+  background: #ffd93d;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-top: 2rem;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .heroCards,
+  .featureGrid,
+  .processGrid,
+  .techGrid,
+  .pricingGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroCta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .featured {
+    transform: none;
+  }
+
+  .price {
+    font-size: 2.5rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .heroSubtitle {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+  }
+
+  .tabContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
